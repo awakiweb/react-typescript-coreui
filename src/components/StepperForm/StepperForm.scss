@@ -1,0 +1,73 @@
+input{
+    width: 100%;
+}
+
+.stepnumber{
+    /*border:1px solid rebeccapurple;*/
+    background-color: #9c9c9c42;
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rebeccapurple;
+    font-weight: bold;
+    transition: 1s ease;
+    
+
+}
+
+.stepnumber.active{
+    background-color: rebeccapurple;
+
+    color: white;
+
+}
+
+.line{
+    width: 20%;
+    height: 5px;
+   /* border:1px solid rebeccapurple;*/
+    background-color: #9c9c9c42;
+    transition: 0.8s ease;
+
+  
+}
+
+.line.active{
+    background-color: rebeccapurple;
+    border:none;
+
+}
+
+
+
+.containerForm{
+    display: none;
+}
+
+.containerForm.active{
+    display: block;
+}
+
+
+
+.btn-simple{
+    border-radius: 2rem;
+    border:none;
+    padding:0.4rem 2.5rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.btn-simple.btn-border{
+    border:blueviolet 1px solid;
+    color: rebeccapurple;
+    background-color: transparent;
+}
+
+.btn-simple.btn-full-bgcolor{
+    background-color: blueviolet;
+    color:white;
+}

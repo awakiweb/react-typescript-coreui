@@ -1,25 +1,52 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import "@coreui/coreui/scss/coreui.scss";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {
+  CCreateElement,
+  CSidebar,
+  CSidebarBrand, CSidebarMinimizer,
+  CSidebarNav,
+  CSidebarNavDivider,
+  CSidebarNavDropdown, CSidebarNavItem, CSidebarNavTitle
+} from "@coreui/react";
+import CIcon from "@coreui/icons-react";
+import navigation from "./navigation.js";
+import {cilSettings} from '@coreui/icons' 
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import StepperForm from './components/StepperForm/StepperForm';
 
-function App() {
+
+const  App = () =>{
+
+
+const[visible,setVisible] = useState(false)
+
+const stepper =()=>{
+  return <h1>steppper</h1>
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="c-app c-default-layout">
+      <Sidebar visible={visible} onClickOutSideClosed={()=>setVisible(!visible)}/>
+      <div className="c-wrapper">
+          <Header onClickVisible={()=>setVisible(!visible)}/>
+          <div className="c-body">
+           
+              <Switch>
+                <Route  exact path="/"   component={Dashboard} />
+                <Route  path="/stepper"  component={StepperForm} />
+            </Switch>
+          </div>
+     
+      </div>
     </div>
+
+
+    
   );
 }
 
