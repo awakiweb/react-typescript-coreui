@@ -1,6 +1,12 @@
+.sizecontainer{
+  max-width: 647px;
+  min-width: 647px;
+}
+
 input{
     width: 100%;
 }
+
 
 .stepnumber{
     /*border:1px solid rebeccapurple;*/
@@ -71,3 +77,36 @@ input{
     background-color: blueviolet;
     color:white;
 }
+
+input[type="text"],[type="email"]{
+  border: none;
+  background-color: rgb(224, 208, 240);
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+label{
+  font-weight: bold;
+}
+
+select{
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #882bdffb;
+  font-weight: bold;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../../assets/arrow-down-sign-to-navigate.svg') center right .8rem no-repeat rgb(224, 208, 240) !important;
+  background-position: right .5rem 0 bottom !important;
+  background-size: .8rem !important;
+}
+
+input::placeholder{
+  color: rgb(141, 135, 135);
+  font-weight: bold;
+}
+
+
+  
