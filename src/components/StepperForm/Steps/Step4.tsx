@@ -6,9 +6,11 @@ const Step4 =()=>{
 
     return(
         <>  
-            <form action="">
-                <label htmlFor="">What type of business?</label>
-                <input placeholder="Exmaple"  type="text" name="" id="" />
+            <form className="row w-100" action="">
+                <div className="col-12">
+                    <label htmlFor="">What type of business?</label>
+                    <input className="w-100" placeholder="Exmaple"  type="text" name="" id="" />
+                </div>
             </form>
         </>
     )
